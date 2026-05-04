@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cuh2e6j0q5v8r"]
+
+[ext_resource type="Texture2D" uid="uid://id5vaf8j80nf" path="res://GUI/Todo/coins-chests-etc-2-0.png" id="1_55yyw"]
+[ext_resource type="Script" uid="uid://cwtglhragwo21" path="res://Niveles/cofre.gd" id="1_dw10e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw10e"]
+atlas = ExtResource("1_55yyw")
+region = Rect2(448, 696, 32, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bclhj"]
+atlas = ExtResource("1_55yyw")
+region = Rect2(480, 696, 32, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7thk2"]
+atlas = ExtResource("1_55yyw")
+region = Rect2(512, 696, 32, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1qh4"]
+atlas = ExtResource("1_55yyw")
+region = Rect2(544, 696, 32, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vb7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw10e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bclhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7thk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1qh4")
+}],
+"loop": false,
+"name": &"abrir",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw10e")
+}],
+"loop": false,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysgts"]
+size = Vector2(30, 14)
+
+[node name="cofre" type="Area2D" unique_id=1748202641]
+collision_layer = 18
+script = ExtResource("1_dw10e")
+
+[node name="cofre" type="AnimatedSprite2D" parent="." unique_id=896506048]
+position = Vector2(0, -1.5)
+sprite_frames = SubResource("SpriteFrames_0vb7q")
+animation = &"abrir"
+speed_scale = 2.0
+
+[node name="colision" type="CollisionShape2D" parent="." unique_id=2045938596]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_ysgts")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1732541353]
+collision_layer = 2
+collision_mask = 16
+
+[node name="colision" type="CollisionShape2D" parent="StaticBody2D" unique_id=1694856967]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ysgts")

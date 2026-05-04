@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bhxs7tlsj10wk"]
+
+[ext_resource type="Script" uid="uid://cvqojp2khkba5" path="res://Moin/moneda.gd" id="1_75y3h"]
+[ext_resource type="Texture2D" uid="uid://id5vaf8j80nf" path="res://GUI/Todo/coins-chests-etc-2-0.png" id="2_ehaea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyuxq"]
+atlas = ExtResource("2_ehaea")
+region = Rect2(304, 16, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy72a"]
+atlas = ExtResource("2_ehaea")
+region = Rect2(320, 16, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq1yu"]
+atlas = ExtResource("2_ehaea")
+region = Rect2(336, 16, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrg63"]
+atlas = ExtResource("2_ehaea")
+region = Rect2(352, 16, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hahpa"]
+atlas = ExtResource("2_ehaea")
+region = Rect2(368, 16, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avxmj"]
+atlas = ExtResource("2_ehaea")
+region = Rect2(384, 16, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3oqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyuxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy72a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq1yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrg63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hahpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avxmj")
+}],
+"loop": true,
+"name": &"Moneda",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_koa44"]
+radius = 5.0
+
+[node name="Moneda" type="Area2D" unique_id=594905539]
+collision_layer = 4
+script = ExtResource("1_75y3h")
+
+[node name="Moneda" type="AnimatedSprite2D" parent="." unique_id=1273455921]
+sprite_frames = SubResource("SpriteFrames_b3oqp")
+animation = &"Moneda"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=632847455]
+position = Vector2(-1, 2)
+shape = SubResource("CircleShape2D_koa44")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
