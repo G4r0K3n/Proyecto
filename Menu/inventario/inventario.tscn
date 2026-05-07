@@ -22,158 +22,388 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -276.0
-offset_top = -174.0
-offset_right = -69.0
-offset_bottom = -62.0
+offset_left = -196.0
+offset_top = -136.0
+offset_right = 145.0
+offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_2ap5o")
 
 [node name="Casillas" type="GridContainer" parent="Panel/TextureRect" unique_id=401345244]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 22.0
-offset_right = 198.0
-offset_bottom = 106.0
-columns = 7
+offset_left = 88.0
+offset_top = 62.0
+offset_right = 405.0
+offset_bottom = 261.0
+columns = 10
 
 [node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=295149703]
+custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=44009670]
+[node name="TextureRect64" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=146372144]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1391625041]
+[node name="TextureRect65" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=5564098]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=207450209]
+[node name="TextureRect66" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1923170601]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect5" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1887348830]
+[node name="TextureRect67" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1783719535]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect6" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=613328156]
+[node name="TextureRect68" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1902237573]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect7" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=544346178]
+[node name="TextureRect69" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1720076728]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect8" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1310944344]
+[node name="TextureRect70" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1255339745]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect9" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1859473849]
+[node name="TextureRect71" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=856488596]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect10" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1187286768]
+[node name="TextureRect72" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=15813507]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect11" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=446488547]
+[node name="TextureRect73" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=430990964]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect12" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=99984744]
+[node name="TextureRect74" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=226994559]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect13" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1030669941]
+[node name="TextureRect75" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1007768752]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect14" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=95043111]
+[node name="TextureRect76" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=61393915]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect15" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1790507840]
+[node name="TextureRect77" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=39755250]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect16" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=470980280]
+[node name="TextureRect78" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=956785845]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect17" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1307459005]
+[node name="TextureRect79" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=558113951]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect18" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2063933166]
+[node name="TextureRect80" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=558399332]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect19" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1582969665]
+[node name="TextureRect81" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1474345457]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect20" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=268397226]
+[node name="TextureRect82" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1352283535]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect21" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1113720990]
+[node name="TextureRect83" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2098278229]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect22" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=539879236]
+[node name="TextureRect84" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1828252148]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect23" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=43193022]
+[node name="TextureRect85" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1727713934]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect24" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=940281190]
+[node name="TextureRect86" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1803708306]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect25" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1976213039]
+[node name="TextureRect87" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=325135616]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect26" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2143803720]
+[node name="TextureRect88" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1679521556]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect27" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1821436055]
+[node name="TextureRect89" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1609351581]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
 
-[node name="TextureRect28" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1984749584]
+[node name="TextureRect90" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=362193448]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect29" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1228680203]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect30" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1423468549]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect31" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=715533156]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect32" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1340501190]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect33" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1698739430]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect34" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=936963580]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect35" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2147236506]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect36" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1903889813]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect37" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=655454080]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect38" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=271993863]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect39" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2086104976]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect40" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=952131642]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect41" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1539504950]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect42" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1638043259]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect43" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1335061596]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect44" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1155638358]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect45" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=993452600]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect46" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=391122576]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect47" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=433344667]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect48" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=943160450]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect49" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=351957719]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect50" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1066612469]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect51" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1781345247]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect52" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=474420074]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect53" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=264498110]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect54" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=210350501]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect55" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2036063708]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect56" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1193897139]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect57" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=183223315]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect58" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=316642824]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect59" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=762908384]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect60" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=259795957]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="." unique_id=1617816436]
+offset_left = 445.0
+offset_top = 425.0
+offset_right = 718.0
+offset_bottom = 489.0
+text = "Volver"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

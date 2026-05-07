@@ -27,12 +27,7 @@ func _physics_process(delta):
 	match estado:
 		estados_enemigo.movi:
 			caminar()
-		estados_enemigo.idle:
-			velocity.x = 0
-			$Enem.play("Idle")
 		estados_enemigo.atck:
-			velocity.x = 0
-		estados_enemigo.mrte:
 			velocity.x = 0
 	choques()
 	move_and_slide()
@@ -62,13 +57,20 @@ func atacar():
 	$Enem.play("Atacando")
 	$pegar/pegarColi.disabled = false
 	await get_tree().create_timer(0.5).timeout
+	
+	if murio:
+		return
+		
 	if detPlyr.is_colliding():
 		var jugador = detPlyr.get_collider()
 		if jugador.is_in_group("personaje"):
 			DatosPersonaje.vida -= 1
 	$pegar/pegarColi.disabled = true
-	
 	await get_tree().create_timer(0.5).timeout
+	
+	if murio:
+		return
+	
 	estado = estados_enemigo.movi
 
 func caminar():
@@ -88,13 +90,20 @@ func giro():
 	puede_girar = true
 	
 func daño(cantidad):
+	if murio:
+		return
 	vida -= cantidad
 	if vida <= 0:
 		morir()
 		
 func morir():
+	if murio: 
+		return
+	
+	murio = true
 	estado = estados_enemigo.mrte
 	velocity.x = 0
+	$pegar/pegarColi.disabled = true
 	$Enem.play("Muerte")
 	await $Enem.animation_finished
 	queue_free()

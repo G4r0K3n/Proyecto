@@ -1,13 +1,13 @@
 extends CharacterBody2D
 #Creamos variables para el input y constante velocidad y gravedad. El @export es para que el valor de la variable lo podamos modificar desde el inspector
 var input
-@export var SPEED = 100
-@export var GRAVEDAD = 800.0
+const SPEED = 100
+const GRAVEDAD = 800.0
 
 #Salto
 var contador_Sal = 0
 @export var max_Salto = 2
-@export var SALTO = 300
+const SALTO = 300
 
 #Todo lo referente a estados de movimiento atacar o muerte
 var estado = estados_Personaje.movi
@@ -18,20 +18,35 @@ var pausa
 @onready var inventario = preload("res://Menu/inventario/inventario.tscn")
 var inven
 
+var morir = false
+
+var atacando = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if DatosPersonaje.posicion != null:
-		global_position = DatosPersonaje.posicion
-		DatosPersonaje.posicion = null
+	if multiplayer.has_multiplayer_peer():
+		if name.to_int() == 0:
+			set_multiplayer_authority(1)
+		else:
+			set_multiplayer_authority(name.to_int())
+		if not is_multiplayer_authority():
+			return
+			
+			
 	pausa = menu_pausa.instantiate()
 	add_child(pausa)
 	inven = inventario.instantiate()
 	add_child(inven)
+	if DatosPersonaje.posicion != null:
+		global_position = DatosPersonaje.posicion
+		DatosPersonaje.posicion = null
 	$espada/colisionEsp.disabled = true
 	$PersonajeAnimado.animation_finished.connect(_animacion_acabada)
 	$espada.body_entered.connect(golpeo)
 
 func _process(delta):
+	if multiplayer.has_multiplayer_peer() and not is_multiplayer_authority():
+		return
 	if Input.is_action_just_pressed("ui_cancel"):
 		if pausa.visible:
 			pausa.cerrar()
@@ -44,9 +59,11 @@ func _process(delta):
 			inven.abrir()
 			
 func _physics_process(delta):	
-	if estado == estados_Personaje.mrte:
-		muerte()
+	if multiplayer.has_multiplayer_peer() and not is_multiplayer_authority():
 		return
+	
+	if DatosPersonaje.vida <= 0:
+		estado = estados_Personaje.mrte
 	
 	if is_on_floor():
 		contador_Sal = 0
@@ -55,9 +72,6 @@ func _physics_process(delta):
 			velocity.y = -SALTO
 			contador_Sal +=1
 	
-	if DatosPersonaje.vida <= 0:
-		estado = estados_Personaje.mrte
-			
 	match estado:
 		estados_Personaje.movi:
 			movimiento(delta)
@@ -145,11 +159,16 @@ func movimiento_atacando(delta):
 		velocity.x = 0
 		
 func muerte():
+	if morir:
+		return
+	morir = true
 	$PersonajeAnimado.play("Muerte")
 	velocity.x = 0
 	await $PersonajeAnimado.animation_finished
 	DatosPersonaje.vida = 4
 	DatosPersonaje.monedas = 0
+	DatosPersonaje.invenatario = []
+	DatosPersonaje.botas_des = false
 	if get_tree():
 		get_tree().reload_current_scene()
 		
@@ -158,4 +177,8 @@ func golpeo(body):
 		body.daño(2)
 
 func _enter_tree() -> void:
-	set_multiplayer_authority(name.to_int())
+	if multiplayer.has_multiplayer_peer():
+		if name.to_int() == 0:
+			set_multiplayer_authority(1)
+		else:
+			set_multiplayer_authority(name.to_int())

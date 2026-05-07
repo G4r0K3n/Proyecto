@@ -1,5 +1,5 @@
 extends Area2D
 
 func _on_body_entered(body):
-	if body.name == "personaje":
+	if body.is_in_group("personaje"):
 		DatosPersonaje.vida -= 1

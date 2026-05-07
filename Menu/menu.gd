@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 
 
 func _on_nueva_part_pressed():
+	multiplayer.multiplayer_peer = null
 	get_tree().change_scene_to_file("res://Niveles/lvl_1.tscn")
 
 

@@ -213,7 +213,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4jhyu")
 }],
-"loop": true,
+"loop": false,
 "name": &"Atacando",
 "speed": 5.0
 }, {
@@ -334,8 +334,6 @@ script = ExtResource("1_cwh7a")
 [node name="Enem" type="AnimatedSprite2D" parent="." unique_id=1852174919]
 sprite_frames = SubResource("SpriteFrames_yqla3")
 animation = &"Atacando"
-frame = 7
-frame_progress = 0.23499379
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=712504761]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ci5wrdxreonsc" path="res://Scripts/multi/multijugador.gd" id="1_ky8w8"]
 [ext_resource type="Script" uid="uid://c6hsiyp2fro5x" path="res://Scripts/multi/Server.gd" id="2_2n5fm"]
-[ext_resource type="PackedScene" uid="uid://dpydekwxlblxg" path="res://Scripts/Personaje/personaje.tscn" id="3_2n5fm"]
+[ext_resource type="PackedScene" uid="uid://ujscdsctrj7x" path="res://Niveles/lvl_1.tscn" id="3_2n5fm"]
 
 [node name="Multijugador" type="Control" unique_id=1322702029]
 layout_mode = 3
@@ -56,7 +56,6 @@ text = "Unirse Partida"
 [node name="Server" type="Node" parent="." unique_id=133285704 node_paths=PackedStringArray("escena")]
 script = ExtResource("2_2n5fm")
 jugador = ExtResource("3_2n5fm")
-ip = "127.0.0.1"
 port = 3050
 clientes = 2
 escena = NodePath("../Room")

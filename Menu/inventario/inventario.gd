@@ -37,3 +37,7 @@ func actualizarInv():
 		if nom in ITEMS:
 			Casillas[i].texture = ITEMS[nom]["imagen"]
 			Casillas[i].tooltip_text = ITEMS[nom]["descripcion"]
+
+
+func _on_button_pressed() -> void:
+	cerrar()
