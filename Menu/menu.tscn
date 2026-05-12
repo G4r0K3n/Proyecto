@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gxt5q6x7um7q" path="res://Menu/menu.gd" id="1_ihied"]
 [ext_resource type="FontFile" uid="uid://c317pln7swpqy" path="res://Menu/font/BlackFlag.ttf" id="1_rwxi6"]
+[ext_resource type="Texture2D" uid="uid://btdjcaygpnpw8" path="res://Menu/MenuPortada.png" id="2_w6voe"]
 [ext_resource type="AudioStream" uid="uid://by5cx8hbqg7ri" path="res://Songs/Piano noire.mp3" id="3_raj00"]
 [ext_resource type="Script" uid="uid://mquga3wnj1x" path="res://Menu/volumen.gd" id="4_8w4re"]
 [ext_resource type="Script" uid="uid://b77rebpxe1s2p" path="res://Menu/activar_pantalla_compl.gd" id="5_ofseh"]
@@ -30,6 +31,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=622331956]
+layout_mode = 0
+offset_left = -1119.0
+offset_right = 1157.0
+offset_bottom = 1024.0
+texture = ExtResource("2_w6voe")
+expand_mode = 1
+flip_h = true
 
 [node name="botones" type="VBoxContainer" parent="." unique_id=1472306346]
 layout_mode = 1
@@ -110,6 +120,7 @@ autoplay = true
 bus = &"Musica"
 
 [node name="opciones" type="Panel" parent="." unique_id=252730360]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

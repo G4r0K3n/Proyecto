@@ -7,6 +7,10 @@ const ITEMS = {
 	"botas": {
 		"imagen": preload("res://Menu/inventario/Items/EscaladaBotas.png"),
 		"descripcion": "Las botas de Hermes - Si no te permiten volar, pero con esto desafiaras la gravedad de la escalada"
+	},
+	"Pies Veloces":{
+		"imagen": preload("res://Menu/inventario/Items/Dash.png"),
+		"descripcion": "Pies Veloces. Con esto tendras la capacidad de moverte de una manera mas rapida"
 	}
 }
 
@@ -30,7 +34,6 @@ func actualizarInv():
 	for cas in Casillas:
 		cas.texture = null
 		cas.tooltip_text = ""
-		
 		
 	for i in DatosPersonaje.invenatario.size():
 		var nom = DatosPersonaje.invenatario[i]

@@ -219,7 +219,7 @@ height = 28.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlh1h"]
 size = Vector2(275, 36)
 
-[node name="boss" type="CharacterBody2D" unique_id=2082188285]
+[node name="boss" type="CharacterBody2D" unique_id=2082188285 groups=["enemigo"]]
 collision_mask = 3
 script = ExtResource("1_jlh1h")
 
@@ -241,7 +241,7 @@ collision_mask = 2
 
 [node name="Jugador" type="RayCast2D" parent="." unique_id=2074829619]
 position = Vector2(1, 18)
-target_position = Vector2(49, 0)
+target_position = Vector2(37, 0)
 
 [node name="areaAgro" type="Area2D" parent="." unique_id=1981799657]
 position = Vector2(15, 15)
@@ -257,3 +257,4 @@ polygon = PackedVector2Array(45, 18, 37, 2, -11, 2, 0, 10, 29, 7, 38, 17, 4, 33,
 
 [connection signal="body_entered" from="areaAgro" to="." method="_on_area_agro_body_entered"]
 [connection signal="body_exited" from="areaAgro" to="." method="_on_area_agro_body_exited"]
+[connection signal="body_entered" from="Golpe" to="." method="_on_golpe_body_entered"]

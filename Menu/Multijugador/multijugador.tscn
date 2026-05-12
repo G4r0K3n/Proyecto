@@ -57,7 +57,7 @@ text = "Unirse Partida"
 script = ExtResource("2_2n5fm")
 jugador = ExtResource("3_2n5fm")
 port = 3050
-clientes = 2
+clientes = 1
 escena = NodePath("../Room")
 metadata/_custom_type_script = "uid://c6hsiyp2fro5x"
 

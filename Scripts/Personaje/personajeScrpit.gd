@@ -19,8 +19,13 @@ var pausa
 var inven
 
 var morir = false
-
 var atacando = false
+
+var dashenado = false
+const DASHSPEED = 1000
+const DASHTIEMPO = 0.1
+const DASHCC = 0.8
+var dashListo = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -86,40 +91,43 @@ func _physics_process(delta):
 func movimiento(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left") 
 	
-	if input != 0:
-		if input > 0:
-			velocity.x += SPEED * delta
-			velocity.x = clamp(SPEED, 100.0, SPEED)
-			$PersonajeAnimado.scale.x = 1
-			$espada.scale.x = 1
-			$PersonajeAnimado.play("Corriendo")
-		if input < 0:
-			velocity.x -= SPEED * delta
-			velocity.x = clamp(-SPEED, 100.0, -SPEED)
-			$PersonajeAnimado.scale.x = -1
-			$espada.scale.x = -1
-			$PersonajeAnimado.play("Corriendo")
-	if input == 0:
-		velocity.x = 0
-		$PersonajeAnimado.play("Idle")
+	if not dashenado:
+		if input != 0:
+			if input > 0:
+				velocity.x += SPEED * delta
+				velocity.x = clamp(SPEED, 100.0, SPEED)
+				$PersonajeAnimado.scale.x = 1
+				$espada.scale.x = 1
+				$PersonajeAnimado.play("Corriendo")
+			if input < 0:
+				velocity.x -= SPEED * delta
+				velocity.x = clamp(-SPEED, 100.0, -SPEED)
+				$PersonajeAnimado.scale.x = -1
+				$espada.scale.x = -1
+				$PersonajeAnimado.play("Corriendo")
+		if input == 0:
+			velocity.x = 0
+			$PersonajeAnimado.play("Idle")
 
-#Salto
-	if !is_on_floor():
-		if velocity.y > 0:
-			$PersonajeAnimado.play("Caer")
-		if velocity.y < 0:
-			$PersonajeAnimado.play("Saltar")
-		
-	if Input.is_action_pressed("ui_atacar"):
-		estado = estados_Personaje.atck
-		ataque()
-		
-	if is_on_wall() and Input.is_action_just_pressed("ui_accept") and DatosPersonaje.botas_des:
-		if velocity.x > 0:
-			velocity = Vector2(-800,-350)
-		elif velocity.x < 0:
-			velocity = Vector2(800, -350)
-		
+	#Salto
+		if !is_on_floor():
+			if velocity.y > 0:
+				$PersonajeAnimado.play("Caer")
+			if velocity.y < 0:
+				$PersonajeAnimado.play("Saltar")
+			
+		if Input.is_action_pressed("ui_atacar"):
+			estado = estados_Personaje.atck
+			ataque()
+			
+		if is_on_wall() and Input.is_action_just_pressed("ui_accept") and DatosPersonaje.botas_des:
+			if velocity.x > 0:
+				velocity = Vector2(-800,-350)
+			elif velocity.x < 0:
+				velocity = Vector2(800, -350)
+			
+		if Input.is_action_just_pressed("Dash") and DatosPersonaje.dash and dashListo and not dashenado:
+			Dash()
 		
 	gravedad(delta)
 	move_and_slide()
@@ -175,10 +183,14 @@ func muerte():
 func golpeo(body):
 	if body.is_in_group("enemigo"):
 		body.daño(2)
-
-func _enter_tree() -> void:
-	if multiplayer.has_multiplayer_peer():
-		if name.to_int() == 0:
-			set_multiplayer_authority(1)
-		else:
-			set_multiplayer_authority(name.to_int())
+	
+func Dash():
+	dashenado = true
+	dashListo = false
+	var dir = $PersonajeAnimado.scale.x 
+	velocity.x = DASHSPEED * dir
+	$PersonajeAnimado.play("Dash")
+	await get_tree().create_timer(DASHTIEMPO).timeout
+	dashenado = false
+	await get_tree().create_timer(DASHCC).timeout
+	dashListo = true

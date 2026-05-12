@@ -161,9 +161,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("31_i4jc5")
 }],
-"loop": false,
+"loop": true,
 "name": &"Dash",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 0.1,
@@ -260,7 +260,9 @@ clip_children = 2
 position = Vector2(0, -14)
 scale = Vector2(0.96875, 1)
 sprite_frames = SubResource("SpriteFrames_njdoy")
-animation = &"Muerte"
+animation = &"Atacar"
+frame = 11
+frame_progress = 1.0
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1558300287]
