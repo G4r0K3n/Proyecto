@@ -10,3 +10,7 @@ func _on_crear_pressed() -> void:
 func _on_unirse_pressed() -> void:
 	multijugadorMan.crearCliente(ip.text)
 	hide()
+
+
+func _on_volver_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu/menu.tscn")
