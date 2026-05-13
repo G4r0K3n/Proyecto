@@ -1,0 +1,16 @@
+extends Control
+
+@onready var ip = $VBoxContainer/ip
+@onready var multijugadorMan = $Server
+
+func _on_crear_pressed() -> void:
+	multijugadorMan.crearServidor()
+	hide()
+
+func _on_unirse_pressed() -> void:
+	multijugadorMan.crearCliente(ip.text)
+	hide()
+
+
+func _on_volver_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/UI/Menu/menu.tscn")

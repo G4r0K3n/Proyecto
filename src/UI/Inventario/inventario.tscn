@@ -1,0 +1,409 @@
+[gd_scene format=3 uid="uid://cheuss47dqhyh"]
+
+[ext_resource type="Texture2D" uid="uid://bbo0mmmb7bo2t" path="res://src/UI/Inventario/Inventario.png" id="1_2ap5o"]
+[ext_resource type="Script" uid="uid://b3w7fgoxu0tq1" path="res://src/UI/Inventario/inventario.gd" id="1_vh7da"]
+[ext_resource type="Texture2D" uid="uid://dkqxi8v18bnsk" path="res://src/UI/Inventario/SlotInven.png" id="2_vh7da"]
+
+[node name="inventario" type="CanvasLayer" unique_id=328077016]
+process_mode = 3
+script = ExtResource("1_vh7da")
+
+[node name="Panel" type="Panel" parent="." unique_id=212602991]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=884090846]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -136.0
+offset_right = 145.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2ap5o")
+
+[node name="Casillas" type="GridContainer" parent="Panel/TextureRect" unique_id=401345244]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 62.0
+offset_right = 405.0
+offset_bottom = 261.0
+columns = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=295149703]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect64" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=146372144]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect65" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=5564098]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect66" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1923170601]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect67" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1783719535]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect68" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1902237573]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect69" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1720076728]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect70" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1255339745]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect71" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=856488596]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect72" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=15813507]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect73" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=430990964]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect74" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=226994559]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect75" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1007768752]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect76" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=61393915]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect77" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=39755250]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect78" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=956785845]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect79" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=558113951]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect80" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=558399332]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect81" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1474345457]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect82" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1352283535]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect83" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2098278229]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect84" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1828252148]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect85" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1727713934]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect86" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1803708306]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect87" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=325135616]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect88" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1679521556]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect89" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1609351581]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect90" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=362193448]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect29" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1228680203]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect30" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1423468549]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect31" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=715533156]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect32" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1340501190]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect33" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1698739430]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect34" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=936963580]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect35" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2147236506]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect36" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1903889813]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect37" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=655454080]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect38" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=271993863]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect39" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2086104976]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect40" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=952131642]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect41" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1539504950]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect42" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1638043259]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect43" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1335061596]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect44" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1155638358]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect45" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=993452600]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect46" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=391122576]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect47" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=433344667]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect48" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=943160450]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect49" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=351957719]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect50" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1066612469]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect51" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1781345247]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect52" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=474420074]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect53" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=264498110]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect54" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=210350501]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect55" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=2036063708]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect56" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=1193897139]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect57" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=183223315]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect58" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=316642824]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect59" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=762908384]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="TextureRect60" type="TextureRect" parent="Panel/TextureRect/Casillas" unique_id=259795957]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_vh7da")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="." unique_id=1617816436]
+offset_left = 445.0
+offset_top = 425.0
+offset_right = 718.0
+offset_bottom = 489.0
+text = "Volver"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

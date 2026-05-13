@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://umnacgyv5xlu"]
+
+[ext_resource type="Script" uid="uid://cojdpt8xvuhpd" path="res://src/objetos/Daño/daño.gd" id="1_h6te2"]
+[ext_resource type="Texture2D" uid="uid://deshoa44g1eeg" path="res://assets/SetMapa/pinchos/picos.png" id="2_dntps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6te2"]
+size = Vector2(16, 15)
+
+[node name="picos" type="Area2D" unique_id=1073808786]
+collision_layer = 8
+script = ExtResource("1_h6te2")
+
+[node name="picos" type="Sprite2D" parent="." unique_id=839917398]
+texture = ExtResource("2_dntps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1531407982]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_h6te2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
