@@ -94,14 +94,12 @@ func movimiento(delta):
 	if not dashenado:
 		if input != 0:
 			if input > 0:
-				velocity.x += SPEED * delta
 				velocity.x = clamp(SPEED, 100.0, SPEED)
 				$PersonajeAnimado.scale.x = 1
 				$espada.scale.x = 1
 				$PersonajeAnimado.play("Corriendo")
-			if input < 0:
-				velocity.x -= SPEED * delta
-				velocity.x = clamp(-SPEED, 100.0, -SPEED)
+			else:
+				velocity.x = clamp(-SPEED, -100.0, -SPEED)
 				$PersonajeAnimado.scale.x = -1
 				$espada.scale.x = -1
 				$PersonajeAnimado.play("Corriendo")
@@ -141,9 +139,6 @@ func gravedad(delta):
 func ataque():
 	$PersonajeAnimado.play("Atacar")
 	$espada/colisionEsp.disabled = false
-	
-func normalidad():
-	estado = estados_Personaje.movi
 
 func _animacion_acabada():
 	if estado == estados_Personaje.atck:
@@ -177,6 +172,7 @@ func muerte():
 	DatosPersonaje.monedas = 0
 	DatosPersonaje.invenatario = []
 	DatosPersonaje.botas_des = false
+	DatosPersonaje.dash = false
 	if get_tree():
 		get_tree().reload_current_scene()
 		

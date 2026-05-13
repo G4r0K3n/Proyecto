@@ -217,7 +217,7 @@ radius = 6.0
 height = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlh1h"]
-size = Vector2(275, 36)
+size = Vector2(155, 31)
 
 [node name="boss" type="CharacterBody2D" unique_id=2082188285 groups=["enemigo"]]
 collision_mask = 3
@@ -247,6 +247,7 @@ target_position = Vector2(37, 0)
 position = Vector2(15, 15)
 
 [node name="AreaDeAgro" type="CollisionShape2D" parent="areaAgro" unique_id=1586405713]
+position = Vector2(-4.5, 2.5)
 shape = SubResource("RectangleShape2D_jlh1h")
 debug_color = Color(0.3078652, 0.62736905, 1.92523e-07, 0.41960785)
 

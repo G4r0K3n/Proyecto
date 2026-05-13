@@ -102,6 +102,7 @@ func muerte():
 	$Golpe/hitbox.disabled = true
 	DatosPersonaje.dash = true
 	DatosPersonaje.invenatario.append("Pies Veloces")
+	DatosPersonaje.monedas += 10
 	queue_free()
 
 func _on_area_agro_body_entered(body: Node2D) -> void:
